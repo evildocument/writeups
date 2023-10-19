@@ -364,7 +364,7 @@ Tem um daemon na porta <i>30002</i> que vai me retornar a senha pro <strong>band
 
 Fui tentar um simples telnet para ver como funciona a interação com o servidor.
 
-![Output do sistema](file:../imgs/bandit24_level1.png)
+![Output do sistema](https://github.com/evildocument/writeups/blob/main/overthewire/imgs/bandit24_level1.png)
 
 Então imeditamente, eu comecei a escrever um script em Python pra tentar resolver.
 
@@ -437,7 +437,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 
 Por fim, a conexão é fechada invocando o método close() no objeto sock
 
-![Output do sistema pós flag](file:../imgs/bandit24_level2.png)
+![Output do sistema pós flag](https://github.com/evildocument/writeups/blob/main/overthewire/imgs/bandit24_level2.png)
 
 Comando(s): N/A
 
@@ -445,45 +445,45 @@ Comando(s): N/A
 
 <p align="center"><strong>LEVEL 26</strong></p> Existe um binário (bandit27-do) no diretório do bandit26, é possível usar ele para executar comandos como o bandit27.
 <br><br>
-Comando(s):<code>./bandit27-do cat /etc/bandit_pass/bandit27</code>
+Comando(s): <code>./bandit27-do cat /etc/bandit_pass/bandit27</code>
 <br><br>
 <strong>FLAG</strong>: YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
 <br><br>
 
 <p align="center"><strong>LEVEL 27</strong></p> Existe um repositório git no usuário bandit27-git que é possível clonar usando a senha do bandit27, a flag está no arquivo README<br><br>
-		Comando(s):<code>git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo bandit27_repo</code><br><br>
+		Comando(s): <code>git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo bandit27_repo</code><br><br>
 <strong>FLAG</strong>: AVanL161y9rsbcJIsFHuw35rjaOM19nR
 <br><br>
 
 <p align="center"><strong>LEVEL 28</strong></p>
-		Comando(s):<code>git log</code>
-		<br>&emsp; &emsp; &emsp; &emsp; &emsp;<code>git show</code><br><br>
+		Comando(s): <code>git log</code>
+		<br>&emsp; &emsp; &emsp; &emsp; &emsp; <code>git show</code><br><br>
 <strong>FLAG</strong>: tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
 <br><br>
 
 
 <p align="center"><strong>LEVEL 29</strong></p> 
-		Comando(s):<code>git log --all -p --</code><br><br>
+		Comando(s): <code>git log --all -p --</code><br><br>
 <br><br>
 <strong>FLAG</strong>: xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
 <br><br>
 
 
 <p align="center"><strong>LEVEL 30</strong></p>
-		Comando(s):<code>git tag -l</code><br><br>
+		Comando(s): <code>git tag -l</code><br><br>
   São etiquetas que demarcam um ponto (commit) que representa alguma mudança significativa no seu código, ou seja, uma versão (ou release) do seu projeto.
 Sendo assim o comando <code>git reset tag2</code> irá retornar o código para o estado onde ele se encontrava no commit representado pela tag2, ou seja, nesse caso, o commit 393a7ba.<br><br>
 <strong>FLAG</strong>: OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
 
 <p align="center"><strong>LEVEL 31</strong></p>
-		Comando(s):<code>git add</code>
-		<br>&emsp; &emsp; &emsp; &emsp; &emsp;<code>git push &lt;origin&gt; &lt;branch&gt;</code><br><br>
+		Comando(s): <code>git add</code>
+		<br>&emsp; &emsp; &emsp; &emsp; &emsp; <code>git push &lt;origin&gt; &lt;branch&gt;</code><br><br>
 <strong>FLAG</strong>: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
 <br><br>
 
 <p align="center"><strong>LEVEL 32</strong></p> 
 Ao fazer o login no ssh, você está diretamente dentro de um shell dash, sendo que todos os caracteres alfabeticos que você digita são todos interpretados como maiusculos, a solução é usar os caracteres especiais, já que não são alfabeticos e são predefinidos.
 o $0 executa o nome do shell usado ao fazer login, ou seja, /bin/sh no caso da maquina. se eu quisesse VER qual shell é usado em vez de invoca-lo, teria que usar o echo antes (echo $0).<br><br>
-Comando(s):<code>$0</code><br><br>
+Comando(s): <code>$0</code><br><br>
 <strong>FLAG</strong>: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
 <br><br>
