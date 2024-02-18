@@ -2,3 +2,5 @@
 
 <h1 align="center">HackTheBox</h1>
 <h3 align="center"><a href="https://github.com/evildocument/writeups/blob/main/hackthebox/keeper/readme.md">Keeper</a></h3>
+<h3 align="center"><a href="https://github.com/evildocument/writeups/tree/main/hackthebox/analytics/readme.md">Analytics</a></h3>
+
